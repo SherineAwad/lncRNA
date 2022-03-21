@@ -14,7 +14,8 @@ if config['PAIRED']:
            r1 = "{sample}.r_1.fq.gz",
            r2 = "{sample}.r_2.fq.gz"
        output:
-           "{sample}.fasta",
+           "{sample}.fasta"
+       conda: 'env/env-bbmap.yaml'
        shell:
            """
            reformat.sh in={input.r1} in2={input.r2} out={output}
@@ -24,7 +25,8 @@ else:
        input:
           "{sample}.fq.gz",
        output:
-           "{sample}.fasta",
+           "{sample}.fasta"
+       conda: 'env/env-bbmap.yaml'
        shell:
            """
            reformat.sh in={input} out={output}
