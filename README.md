@@ -67,6 +67,10 @@ or:
     snakemake -j1 configfile config-WGS.yaml 
 
 
+### TODO 
+
+   More tools will be included
+
 ### References 
 
 1. Li, A., Zhang, J., & Zhou, Z. (2014). PLEK: a tool for predicting long non-coding RNAs and messenger RNAs based on an improved k-mer scheme. BMC bioinformatics, 15(1), 1-10.
