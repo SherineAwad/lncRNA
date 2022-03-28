@@ -9,10 +9,12 @@ Snakemake Workflow for  detection of lncRNA
 
 This is a snakemake pipeline to differentiate lncRNAs from mRNAs.
 
-Your samples names should be listed by default in **samples.tsv** file. You can change this file name in *config file* if needed by editing the **SAMPLES** entry in the *config file*.
-The pipeline takes samples in  either **fasta format** or **fastq format** as input. The **samples.tsv** should contain your samples names without the ".fa" suffix. 
+The pipeline takes samples in  either **fasta format** or **fastq format** as input. 
 
-If your **fastq samples** are paired, you will need to set the **PAIRED** entry in config file as TRUE. 
+The pipeline takes samples with a suffix 'r_1.fq.gz' and 'r_2.fq.gz' if the samples are paired. Or it takes samples with suffix 'fq.gz' if the samples is single-end reads. It also accepts '.fa' reads/ 
+Regardless your samples are paired, single-ended or fasta, samples names should be **samples.tsv** without the suffix. 
+
+You can change the name of the input files **samples.tsv** by editing the config file. You will also need to set the **PAIRED** variable in the config file to either TRUE or FALSE. 
 
 ### Run the pipeline 
 
